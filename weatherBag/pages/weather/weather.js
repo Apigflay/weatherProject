@@ -95,9 +95,9 @@ Page({
   // 关闭信息弹框
   goClose: function () {
     // 同时进行页面跳转
-    wx.switchTab({
-      url:'../index/index'
-    })
+    // wx.switchTab({
+    //   url:'../index/index'
+    // })
   },
   getFutureW:function(){
     this.setData({

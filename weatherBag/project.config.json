@@ -14,7 +14,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.6.5",
 	"appid": "wxf7492acdd2c88af4",
-	"projectname": "importantMa",
+	"projectname": "weather",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
