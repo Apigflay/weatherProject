@@ -1,0 +1,57 @@
+<!--index.wxml-->
+<!-- 轮播 -->
+<swiper indicator-dots="{{indicatorDots}}" indicator-color="green" indicator-active-color="#f40" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" easing-function="{{easing-function}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{key}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="" height="" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 列表 -->
+<view class="title">
+  <image style="width: 100rpx; height: 100rpx; background-color: #eeeeee; class='title_img'" mode="aspectFit" lazy-load="true" src="{{songsArry.songListPic}}"></image>
+  <view class="title_text">
+    {{songsArry.songListName}}
+  </view>
+</view>
+<!-- 快进 -->
+<view class="title" bindtap='listenerButtonSeek'>
+ 快进
+</view>
+<!-- 歌曲列表 -->
+<view class="song_ul">
+  <block wx:for="{{songsArry.songs}}" wx:key="{{key}}">
+    <view class="song_per">
+      <image style="width: 100rpx; height: 100rpx; background-color: #eeeeee; class='title_img'" mode="aspectFit" lazy-load="true" src="{{item.pic}}"></image>
+      <view class="song_name">{{item.name}}</view>
+      <view class="singer">{{item.singer}}</view>
+<!-- 111111 -->
+
+
+      <view class="bofang_box" id="{{index}}" catchtap="goMusic" >
+      <!-- {{index}} -->
+        <image style="width: 100rpx; height: 100rpx; background-color: #eeeeee; " class='bofang' mode="" lazy-load="true" src="../images/bofang.png"  wx:if="{{index==lunIndex}}"></image>
+        <image style="width: 100rpx; height: 100rpx; background-color: #eeeeee;"  class='bofang' mode="" lazy-load="true" src="../images/zhanting.png" wx:else></image>
+      </view>
+<!-- 11111 -->
+    </view>
+  </block>
+</view>
+ <view class="call_area">
+    <text class="user-motto">长的丑又不是我的错，找我爸爸去</text>
+    <view class="clall_father" bindtap='goCall'>給爸爸點電話<image class="img" style="width: 80rpx; height: 80rpx; background-color: ;"  mode="" lazy-load="true" src="../images/you.png"></image></view>
+  </view>
+
+
+<!-- <view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view> -->
