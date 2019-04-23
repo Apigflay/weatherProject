@@ -36,5 +36,5 @@
     </view>
     <view class="careX" wx:if="{{xingbie==1}}">小王子，请别忘了关心你的小仙女！</view>
     <view class="careX" wx:elif="{{xingbie==2}}">小仙女，请别忘了关心你的小王子！</view>
-    <view class="careX" wx:else>你是男的女的</view>
+    <view class="careX" wx:else></view>
  </view>
