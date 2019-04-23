@@ -6,7 +6,7 @@
  <view class='{{topView==1?"topViewShow":"topViewClose"}}'>
     <view class='top'>不忘初心，方得始终</view>
     <view class='close' bindtap='goClose'>
-      该功能暂未开放
+      
       <image class="img" style="width: 80rpx; height: 80rpx; background-color: ;"  mode="" lazy-load="true" src="../images/you.png"></image>
     </view>
     <view class="weather"> 
