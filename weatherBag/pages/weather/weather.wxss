@@ -2,6 +2,11 @@
 page{
   background: #50AC56;
 }
+.button{
+  /* position: absolute; */
+  left: 250rpx;
+  margin-top:50rpx;
+}
 .topViewShow{
   /* position: absolute; */
   /* width: 100%; */

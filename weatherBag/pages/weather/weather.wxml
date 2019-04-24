@@ -2,13 +2,14 @@
 
  <!-- 天气  -->
  <!-- 需要使用 button 来授权登录 -->
-<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+
  <view class='{{topView==1?"topViewShow":"topViewClose"}}'>
     <view class='top'>不忘初心，方得始终</view>
     <view class='close' bindtap='goClose'>
       
       <image class="img" style="width: 80rpx; height: 80rpx; background-color: ;"  mode="" lazy-load="true" src="../images/you.png"></image>
     </view>
+    <button class='button' size='mini' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <view class="weather"> 
       <text>{{weatherData}}</text> 
     </view>
