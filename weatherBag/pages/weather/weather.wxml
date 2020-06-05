@@ -9,6 +9,10 @@
       
       <image class="img" style="width: 80rpx; height: 80rpx; background-color: ;"  mode="" lazy-load="true" src="../images/you.png"></image>
     </view>
+    <button bindtap='getWxCode'>获取code</button>
+    <view>{{wxCode}}</view>
+    <view wx-if='{{wxCode!=111}}' bindtap='copyWxCode' data-text="{{wxCode}}">复制 code</view>
+
     <button class='button' size='mini' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <view class="weather"> 
       <text>{{weatherData}}</text> 

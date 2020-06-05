@@ -17,7 +17,8 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    xingbie: ''//用户性别信息性别 0：未知、1：男、2：女
+    xingbie: '',//用户性别信息性别 0：未知、1：男、2：女
+    wxCode:'111'
   },
 
   /**
@@ -116,6 +117,35 @@ Page({
       xingbie: gender.gender
     })
   },
+  getWxCode:function(){
+    var that =this;
+    wx.login({
+      success (res) {
+        console.log(res)
+        console.log(that.data.wxCode)
+        that.setData({
+          wxCode: res.code
+        });
+      }
+    })
+  },
+  copyWxCode:function(e){
+    console.log(e)
+
+    wx.setClipboardData({
+      data: e.currentTarget.dataset.text,
+      success: function (res) {
+        wx.getClipboardData({
+          success: function (res) {
+            wx.showToast({
+              title: '复制成功'
+            })
+          }
+        })
+      }
+
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -127,7 +157,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    
   },
 
   /**
